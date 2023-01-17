@@ -1,0 +1,8 @@
+rootProject.name = 'product-composite-parent'
+include 'api'
+include 'utils'
+include 'product-composite-service'
+include 'product-service'
+include 'recommendation-service'
+include 'review-service'
+
