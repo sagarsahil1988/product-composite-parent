@@ -5,30 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3c768479-42f6-48e7-a4b8-fdb34fb6c1ae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/techpractice/api/core/product/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/techpractice/api/core/product/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/techpractice/api/core/recommendation/Recommendation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/techpractice/api/core/recommendation/RecommendationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/techpractice/api/core/review/Review.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/techpractice/api/core/review/ReviewService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/techpractice/product_service/services/ProductServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recommendation-service/src/main/java/com/techpractice/services/RecommendationServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/src/main/java/com/techpractice/utils/exceptions/InvalidInputException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/src/main/java/com/techpractice/utils/exceptions/NotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/src/main/java/com/techpractice/utils/http/GlobalControllerExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/src/main/java/com/techpractice/utils/http/HttpErrorInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/src/main/java/com/techpractice/utils/http/ServiceUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/review-service/src/main/java/com/techpractice/services/ReviewServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/techpractice/product_service/ProductServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/techpractice/product_service/ProductServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product-service/src/test/java/com/techpractice/product_service/ProductServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/test/java/com/techpractice/product_service/ProductServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommendation-service/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/review-service/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/utils/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/src/test/java/com/techpractice/utils/DemoApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/test/java/com/techpractice/utils/DemoApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recommendation-service/src/test/java/com/techpractice/RecommendationServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/recommendation-service/src/test/java/com/techpractice/RecommendationServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/review-service/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/review-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
