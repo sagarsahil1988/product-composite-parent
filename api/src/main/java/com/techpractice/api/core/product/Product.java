@@ -13,6 +13,14 @@ public class Product {
         this.serviceAddress = serviceAddress;
     }
 
+//Have to add default constructor to call product API using rest template getForObject Method
+    public Product(){
+        this.productId = 0;
+        this.name = null;
+        this.weight = 0;
+        this.serviceAddress = null;
+    }
+
     public int getProductId() {
         return productId;
     }
