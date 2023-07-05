@@ -17,6 +17,14 @@ public class Review {
         this.serviceAddress = serviceAddress;
     }
 
+    public Review(){
+        this.productId = 0;
+        this.reviewId = 0;
+        this.author = null;
+        this.subject = null;
+        this.content = null;
+        this.serviceAddress = null;
+    }
     public int getProductId() {
         return productId;
     }

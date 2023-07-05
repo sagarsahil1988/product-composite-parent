@@ -27,7 +27,21 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation project(':api')
 	implementation project(':utils')
+
+//	MapStruct for Database entity Management
+	implementation ('org.mapstruct:mapstruct:1.5.3.Final')
+	annotationProcessor('org.mapstruct:mapstruct:1.5.3.Final')
+	testAnnotationProcessor('org.mapstruct:mapstruct:1.5.3.Final')
+
+//	Database
+	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb:2.7.5'
+
+	implementation platform('org.testcontainers:testcontainers-bom:1.15.2')
+		testImplementation 'org.testcontainers:testcontainers'
+		testImplementation 'org.testcontainers:junit-jupiter'
+		testImplementation 'org.testcontainers:mongodb'
 }
+
 
 tasks.named('test') {
 	useJUnitPlatform()

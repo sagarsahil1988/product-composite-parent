@@ -17,6 +17,15 @@ public class Recommendation {
         this.serviceAddress = serviceAddress;
     }
 
+    public Recommendation(){
+        this.productId = 0;
+        this.recommendationId = 0;
+        this.author = null;
+        this.rate = 0;
+        this.content = null;
+        this.serviceAddress = null;
+    }
+
     public int getProductId() {
         return productId;
     }
