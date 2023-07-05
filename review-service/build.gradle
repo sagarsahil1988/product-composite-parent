@@ -17,6 +17,16 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation project(':api')
 	implementation project(':utils')
+//	MapStruct for Database entity Management
+	implementation ('org.mapstruct:mapstruct:1.5.3.Final')
+	annotationProcessor('org.mapstruct:mapstruct:1.5.3.Final')
+	testAnnotationProcessor('org.mapstruct:mapstruct:1.5.3.Final')
+
+//	Database
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'mysql:mysql-connector-java'
+
+
 }
 
 tasks.named('test') {

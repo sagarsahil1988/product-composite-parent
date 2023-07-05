@@ -13,9 +13,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 @Tag(name = "ProductComposite", description = "REST API for composite product information.")
 public interface ProductCompositeService {
 
-//    @ApiOperation(
-//            value = "${api.product-composite.get-composite-product.description}",
-//            notes = "${api.product-composite.get-composite-product.notes}")
     @Operation(
             summary = "${api.product-composite.get-composite-product.description}",
             description = "${api.product-composite.get-composite-product.notes}")
