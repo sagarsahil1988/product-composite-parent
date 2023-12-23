@@ -1,13 +1,10 @@
 package com.techpractice.product_service.persistance;
 
-import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
-import org.springframework.data.repository.PagingAndSortingRepository;
-import org.springframework.stereotype.Component;
+import org.springframework.data.repository.reactive.ReactiveCrudRepository;
+import reactor.core.publisher.Mono;
 
-import java.util.Optional;
+public interface ProductRepository extends ReactiveCrudRepository<ProductEntity, String> {
 
-@EnableMongoRepositories
-public interface ProductRepository extends PagingAndSortingRepository<ProductEntity, String> {
-    Optional<ProductEntity> findByProductId(int productId);
+   Mono<ProductEntity> findByProductId(int productId);
 
 }

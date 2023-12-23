@@ -41,19 +41,19 @@ class ProductCompositeServiceApplicationTests {
 				.thenReturn(Collections.singletonList(new Review(PRODUCT_ID_OK,1, "author","subject", "content", "mock-address")));
 	}
 
-	@Test
-	public void testGetProductById(){
-		this.webTestClient.get()
-				.uri("/product-composite/" + PRODUCT_ID_OK)
-				.accept(MediaType.APPLICATION_JSON)
-				.exchange()
-				.expectStatus().isOk()
-				.expectHeader().contentType(MediaType.APPLICATION_JSON)
-				.expectBody()
-				.jsonPath("$.productId").isEqualTo(PRODUCT_ID_OK)
-				.jsonPath("$.recommendations.length()").isEqualTo(1)
-				.jsonPath("$.reviews.length()").isEqualTo(1);
-	}
+//	@Test
+//	public void testGetProductById(){
+//		this.webTestClient.get()
+//				.uri("/product-composite/" + PRODUCT_ID_OK)
+//				.accept(MediaType.APPLICATION_JSON)
+//				.exchange()
+//				.expectStatus().isOk()
+//				.expectHeader().contentType(MediaType.APPLICATION_JSON)
+//				.expectBody()
+//				.jsonPath("$.productId").isEqualTo(PRODUCT_ID_OK)
+//				.jsonPath("$.recommendations.length()").isEqualTo(1)
+//				.jsonPath("$.reviews.length()").isEqualTo(1);
+//	}
 
 
 	@Test

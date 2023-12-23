@@ -1,4 +1,4 @@
-package com.techpractice.product_service;
+package com.techpractice.product_service.persistance;
 
 import org.springframework.test.context.DynamicPropertyRegistry;
 import org.springframework.test.context.DynamicPropertySource;
