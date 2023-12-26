@@ -16,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
@@ -23,6 +24,10 @@ import org.springframework.web.client.RestTemplate;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import static org.springframework.http.HttpStatus.NOT_FOUND;
+import static org.springframework.http.HttpStatus.UNPROCESSABLE_ENTITY;
+
 @Component
 public class ProductCompositeIntegration implements ProductService, RecommendationService, ReviewService {
 
@@ -61,16 +66,15 @@ public class ProductCompositeIntegration implements ProductService, Recommendati
             return product;
         }catch (HttpClientErrorException exception){
 
-            switch (exception.getStatusCode()){
-                case NOT_FOUND:
-                    throw new NotFoundException(getErrorMessage(exception));
-                case UNPROCESSABLE_ENTITY:
-                    throw  new InvalidInputException(getErrorMessage(exception));
-                default:
-                    LOG.warn("Got a unexpected HTTP error: {}, will rethrow it", exception.getStatusCode());
-                    LOG.warn("Error body: {}", exception.getResponseBodyAsString());
-                    throw exception;
+            HttpStatusCode statusCode = exception.getStatusCode();
+            if (NOT_FOUND.equals(statusCode)) {
+                throw new NotFoundException(getErrorMessage(exception));
+            } else if (UNPROCESSABLE_ENTITY.equals(statusCode)) {
+                throw new InvalidInputException(getErrorMessage(exception));
             }
+            LOG.warn("Got a unexpected HTTP error: {}, will rethrow it", exception.getStatusCode());
+            LOG.warn("Error body: {}", exception.getResponseBodyAsString());
+            throw exception;
         }
     }
 
